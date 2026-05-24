@@ -40,3 +40,50 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
 启动后访问 http://localhost:8000/docs 查看 API 文档。
 API 基地址：`http://localhost:8000/api`
+
+## 环境变量
+
+复制 `.env.example` 为 `.env`，配置生产环境 API 地址：
+
+```bash
+cp .env.example .env
+# 编辑 .env，将 EXPO_PUBLIC_API_URL 改为线上地址
+```
+
+## 发布到 App Store
+
+### 1. 安装 EAS CLI
+
+```bash
+npm install -g eas-cli
+eas login
+```
+
+### 2. 编辑 `eas.json`
+
+将 `submit.production.ios` 中的：
+- `appleId` → 你的 Apple ID 邮箱
+- `ascAppId` → App Store Connect 中的 App ID
+- `appleTeamId` → 开发者团队 ID
+
+### 3. 构建并提交
+
+```bash
+# 构建生产 IPA
+eas build --platform ios --profile production
+
+# 构建 + 自动提交至 App Store Connect
+eas submit --platform ios --profile production
+```
+
+### 发布前检查清单
+
+| 检查项 | 文件/位置 |
+|------|----------|
+| 应用图标 | `assets/icon.png`（1024x1024） |
+| 启动屏 | `assets/splash.png` |
+| 环境变量 | `.env` → `EXPO_PUBLIC_API_URL` |
+| 隐私政策 | `app.json` → `ios.privacyPolicyUrl` |
+| 联系方式 | `app.json` → `ios.supportUrl` |
+| Bundle ID | `app.json` → `ios.bundleIdentifier` |
+| Apple ID | `eas.json` → `submit.production.ios` |

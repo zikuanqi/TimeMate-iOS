@@ -7,14 +7,23 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
     "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
       "backgroundColor": "#0a0a0a"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.timemate.ios"
+      "bundleIdentifier": "com.timemate.ios",
+      "buildNumber": "1",
+      "appStoreUrl": "https://apps.apple.com/app/timemate/id0000000000",
+      "privacyPolicyUrl": "https://timemate.app/privacy",
+      "supportUrl": "https://timemate.app/support",
+      "infoPlist": {
+        "NSCameraUsageDescription": "TimeMate does not use the camera.",
+        "NSMicrophoneUsageDescription": "TimeMate does not use the microphone.",
+        "NSPhotoLibraryUsageDescription": "TimeMate does not access your photo library."
+      }
     },
-    "plugins": [
-      "expo-router"
-    ]
+    "plugins": []
   }
 }
