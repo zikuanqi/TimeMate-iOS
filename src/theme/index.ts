@@ -1,0 +1,56 @@
+export const DarkTheme = {
+  colors: {
+    background: '#0a0a0a',
+    surface: '#141414',
+    surfaceVariant: '#1c1c1e',
+    surfaceHover: '#252525',
+    border: '#2c2c2e',
+    borderLight: '#3a3a3c',
+
+    primary: '#6366f1',
+    primaryLight: '#818cf8',
+    primaryDark: '#4f46e5',
+    primaryBg: 'rgba(99, 102, 241, 0.15)',
+
+    success: '#22c55e',
+    successBg: 'rgba(34, 197, 94, 0.15)',
+    warning: '#f59e0b',
+    warningBg: 'rgba(245, 158, 11, 0.15)',
+    error: '#ef4444',
+    errorBg: 'rgba(239, 68, 68, 0.15)',
+    info: '#3b82f6',
+    infoBg: 'rgba(59, 130, 246, 0.15)',
+
+    text: '#f5f5f5',
+    textSecondary: '#a1a1aa',
+    textMuted: '#71717a',
+    textInverse: '#0a0a0a',
+
+    overlay: 'rgba(0,0,0,0.6)',
+  },
+  spacing: {
+    xs: 4,
+    sm: 8,
+    md: 12,
+    lg: 16,
+    xl: 20,
+    xxl: 24,
+    xxxl: 32,
+  },
+  radius: {
+    sm: 6,
+    md: 10,
+    lg: 14,
+    xl: 18,
+    full: 9999,
+  },
+  fontSize: {
+    xs: 11,
+    sm: 13,
+    md: 15,
+    lg: 17,
+    xl: 20,
+    xxl: 24,
+    title: 28,
+  },
+};

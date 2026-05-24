@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "TimeMate",
+    "slug": "timemate",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0a0a0a"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.timemate.ios"
+    },
+    "plugins": [
+      "expo-router"
+    ]
+  }
+}
