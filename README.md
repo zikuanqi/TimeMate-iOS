@@ -30,14 +30,13 @@ npx expo start
 
 ## 后端
 
-后端 API 使用 FastAPI + SQLite，见仓库 [TimeMate](https://github.com/zikuanqi/TimeMate) 中的 `backend/` 目录。
-
-启动后端：
+后端 API 内置于 `backend/` 目录，使用 FastAPI + SQLite：
 
 ```bash
 cd backend
 pip install -r requirements.txt
-uvicorn main:app --reload
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-默认 API 地址：`http://localhost:8000/api`
+启动后访问 http://localhost:8000/docs 查看 API 文档。
+API 基地址：`http://localhost:8000/api`
